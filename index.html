@@ -1,176 +1,261 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Music Store
-        </title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
-    <body>
-        <div class="heading">
-                <h1>Music Store</h1>
-        </div>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Farhan Tanvir - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105;
+        }
+        .nav-link {
+            @apply text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
 
-        <div class="cover">
-            
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-800">Farhan Tanvir</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-slate-600">
+                <i data-feather="menu"></i>
+            </button>
         </div>
-        <div class="wrapper">
-            
-            <div class="submit-form">
-                    <form class="my-form"   method="post">
-                            <div class="form-group">
-                                <label>Item No:</label>
-                                <input type="text" name="item-no" >
-                                
-                            </div>
-                            <div class="form-group">
-                                <label>Quantity:</label>
-                                <input type="text" name="quantity" >
-                                
-                            </div>
-                            <div class="form-group">
-                                    <label>First Name:</label>
-                                    <input type="text" name="first-name" >
-                                    
-                            </div>
-                            <div class="form-group">
-                                    <label>Last Name:</label>
-                                    <input type="text" name="last-name" >
-                                    
-                            </div>
-                            <div class="form-group">
-                                    <label>Post Code:</label>
-                                    <input type="text" name="post-code" >
-                                    
-                            </div>
-                            <div class="form-group">
-                                    <label>Credit Card:</label>
-                                    <input type="text" name="credit-card" >
-                                    
-                            </div>
-                            <input class="button" type="submit"  value="Submit" >
-                    </form>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#home" class="block py-2 px-6 text-sm nav-link">Home</a>
+            <a href="#about" class="block py-2 px-6 text-sm nav-link">About</a>
+            <a href="#projects" class="block py-2 px-6 text-sm nav-link">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-sm nav-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="pt-32 pb-16 bg-slate-100">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">Md. Farhan Tanvir</h1>
+                    <p class="text-xl text-blue-600 font-medium mt-2 mb-6">Software Engineer</p>
+                    <p class="mb-8 text-lg">
+                        I build robust and scalable web applications with a focus on clean code and user-centric design. Passionate about solving complex problems with modern technologies.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://github.com/farhantanvirtushar" target="_blank" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">
+                            <i data-feather="github" class="w-8 h-8"></i>
+                        </a>
+                        <a href="mailto:farhantanvir.2340.csedu@gmail.com" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">
+                            <i data-feather="mail" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="./me.jpg" alt="Md. Farhan Tanvir" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-white">
+                </div>
             </div>
-            <div class="top-seller">
-                <h1>Top Seller</h1>
-                <div class="top-seller-grid">
-                    <div class="album">
-                        <img class ="image" src="images/i1.jpg" alt="Girl in a jacket" >
-                        item no : 1</br>
-                        0.99$
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">About Me</h3>
+                <div class="grid md:grid-cols-5 gap-12 items-start">
+                    <div class="md:col-span-3">
+                        <p class="text-lg mb-4">
+                            A passionate and results-oriented Software Engineer with a B.Sc. in Computer Science & Engineering from the University of Dhaka. I have hands-on experience in full-stack development, from creating REST APIs with Spring Boot and Flask to building dynamic front-ends with Angular and React.
+                        </p>
+                        <p class="text-lg">
+                            Currently at TigerIT Bangladesh Ltd., I contribute to building microservices, developing hybrid mobile apps, and working with a range of technologies including PostgreSQL, Redis, and Elasticsearch. I am always eager to learn and apply new skills to create efficient and impactful software solutions.
+                        </p>
                     </div>
-                    <div class="album">
-                            <img class ="image" src="images/i2.jpg" alt="Girl in a jacket" >
-                            item no : 2</br>
-                            1.99$
-                    </div>
-                    <div class="album">
-                            <img class ="image" src="images/i3.jpg" alt="Girl in a jacket" >
-                            item no : 3</br>
-                            0.99$
-                    </div>
-                    <div class="album">
-                            <img class ="image" src="images/i4.jpg" alt="Girl in a jacket" >
-                            item no : 4</br>
-                            2.99$
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Core Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Java</span>
+                            <span class="bg-sky-100 text-sky-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Spring Boot</span>
+                            <span class="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Angular</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">TypeScript</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                            <span class="bg-pink-100 text-pink-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Redis</span>
+                            <span class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Microservices</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="new-songs">
-                    <h1>New</h1>
-                    <div class="new-grid">
-                        <div class="album">
-                            <img class ="image" src="images/i5.jpg" alt="Girl in a jacket" >
-                            item no : 5</br>
-                            0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i6.jpg" alt="Girl in a jacket" >
-                                item no : 6</br>
-                                0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i7.jpg" alt="Girl in a jacket" >
-                                item no : 7</br>
-                                1.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i8.jpg" alt="Girl in a jacket" >
-                                item no : 8</br>
-                                0.99$
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">My Projects</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="card">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Alap - Real time chat app</h3>
+                            <p class="mb-4">A full-stack real-time chat application similar to Messenger, allowing users to register, log in, and send text messages instantly.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
+                                <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Socket.io</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                            </div>
+                            <a href="https://github.com/farhantanvirtushar/alap-backend" target="_blank" class="font-medium text-blue-600 hover:underline">View on GitHub &rarr;</a>
                         </div>
                     </div>
-            </div>
-            <div class="trending">
-                    <h1>Trending</h1>
-                    <div class="trending-grid">
-                        <div class="album">
-                            <img class ="image" src="images/i9.jpg" alt="Girl in a jacket" >
-                            item no : 9</br>
-                            2.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i10.jpg" alt="Girl in a jacket" >
-                                item no : 10</br>
-                                0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i11.jpg" alt="Girl in a jacket" >
-                                item no : 11</br>
-                                0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i12.jpg" alt="Girl in a jacket" >
-                                item no : 12</br>
-                                1.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i13.jpg" alt="Girl in a jacket" >
-                                item no : 13</br>
-                                0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i14.jpg" alt="Girl in a jacket" >
-                                item no : 14</br>
-                                    2.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i15.jpg" alt="Girl in a jacket" >
-                                    item no : 15</br>
-                                0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i16.jpg" alt="Girl in a jacket" >
-                                item no : 16</br>
-                                0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i17.jpg" alt="Girl in a jacket" >
-                                item no : 17</br>
-                                1.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i18.jpg" alt="Girl in a jacket" >
-                                item no : 18</br>
-                                    0.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i19.jpg" alt="Girl in a jacket" >
-                                    item no : 19</br>
-                                2.99$
-                        </div>
-                        <div class="album">
-                                <img class ="image" src="images/i20.jpg" alt="Girl in a jacket" >
-                                item no : 20</br>
-                                0.99$
+                    <!-- Project Card 2 -->
+                    <div class="card">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Story Time - Spring MVC</h3>
+                            <p class="mb-4">A full-stack Spring Boot MVC application where users can register, log in, and share stories across different categories.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Spring Boot</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Thymeleaf</span>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Redis</span>
+                            </div>
+                            <a href="https://github.com/farhantanvirtushar/spring-mvc-demo" target="_blank" class="font-medium text-blue-600 hover:underline">View on GitHub &rarr;</a>
                         </div>
                     </div>
+                    <!-- Project Card 3 -->
+                    <div class="card">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">AI Powered Chess Game</h3>
+                            <p class="mb-4">A chess game with an AI opponent implemented using the min-max algorithm with alpha-beta pruning for intelligent moves.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaFX</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">AI Algorithms</span>
+                            </div>
+                            <a href="https://github.com/farhantanvirtushar/Chess" target="_blank" class="font-medium text-blue-600 hover:underline">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                     <!-- Project Card 4 -->
+                    <div class="card">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Hill Driving: Off Road Sim</h3>
+                            <p class="mb-4">An Android off-road car simulation game developed with Unity 3D, published on the Google Play Store.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Unity 3D</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">C#</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Android</span>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.tusharsoft.hilldriving" target="_blank" class="font-medium text-blue-600 hover:underline">View on Play Store &rarr;</a>
+                        </div>
+                    </div>
+                     <!-- Project Card 5 -->
+                    <div class="card">
+                         <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Social Media Site</h3>
+                            <p class="mb-4">A full-stack social media site like Twitter. Users can tweet, follow/unfollow others, and like tweets.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
+                                <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MongoDB</span>
+                            </div>
+                            <a href="https://github.com/farhantanvirtushar/socialmedia-rest-api-node" target="_blank" class="font-medium text-blue-600 hover:underline">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                     <!-- Project Card 6 -->
+                    <div class="card">
+                         <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Graph3D Android App</h3>
+                            <p class="mb-4">An Android app for drawing 3D graphs of mathematical functions, such as f(x,y) = sin(x*y), using OpenGL.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Android</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">OpenGL</span>
+                            </div>
+                            <a href="https://github.com/farhantanvirtushar/Graph3D" target="_blank" class="font-medium text-blue-600 hover:underline">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer">
-                <p>
-                        Copyright &copy; 2019 Music Store
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Get In Touch</h3>
+                <p class="max-w-2xl mx-auto text-lg mb-8">
+                    I'm currently open to new opportunities and collaborations. Feel free to reach out if you have a project in mind or just want to connect.
                 </p>
+                <a href="mailto:farhantanvir.2340.csedu@gmail.com" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors duration-300 inline-block text-lg">
+                    Say Hello
+                </a>
+                 <div class="mt-8 text-lg">
+                    <p><strong>Phone:</strong> +8801710173692</p>
+                    <p><strong>Email:</strong> farhantanvir.2340.csedu@gmail.com</p>
+                    <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+                </div>
             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Md. Farhan Tanvir. All Rights Reserved.</p>
         </div>
-    </body>
+    </footer>
+
+    <script>
+        // Feather Icons
+        feather.replace();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Hide mobile menu on click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header shadow on scroll
+        const header = document.getElementById('header');
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        };
+    </script>
+
+</body>
 </html>
